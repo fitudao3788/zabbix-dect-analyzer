@@ -1,0 +1,15 @@
+services:
+    zabbix-dect-analyzer:
+        build: .
+        container_name: zabbix-dect-analyzer
+        restart: always
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        volumes:
+            - type: bind
+              source: ./config.yml
+              target: /app/config.yml
+              read_only: true
+              bind:
+                create_host_path: false
+  

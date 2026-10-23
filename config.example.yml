@@ -1,0 +1,16 @@
+log_level: info
+
+mirakurun:
+  host: host.docker.internal
+  port: 40772
+  target_service: 700333
+
+streaming:
+  duration_minutes: 1
+  period_minutes: 10
+
+zabbix:
+  host: host.docker.internal
+  port: 10051
+  server_name: Zabbix server
+  item_key_prefix: dect
